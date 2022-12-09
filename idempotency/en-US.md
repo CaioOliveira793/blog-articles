@@ -6,7 +6,7 @@ When using microservices, we aim to create services that have a smaller scope to
 
 ### Network errors, timeout and retry
 
-When dealing with network errors, it is common and simpler to resend the request until they succed. However, retries may not always be uncomplicated, as in timeout errors, where the service that did not receive the response cannot determine whether the request has already been made or not. To overcome this limitation, it is necessary that identical calls to the same service apply the result only once.
+When dealing with network errors, it is common and simpler to resend the request until they succeed. However, retries may not always be uncomplicated, as in timeout errors, where the service that did not receive the response cannot determine whether the request has already been made or not. To overcome this limitation, it is necessary that identical calls to the same service apply the result only once.
 
 ## Idempotency
 
@@ -14,7 +14,7 @@ Idempotency is a property given to an operation that can be performed several ti
 
 ### API idempotency
 
-In terms of APIs, according to [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Idempotent) idempotency is related to the mutation of the server state using identical calls, however it is common to find guides that point out that the server's response must also be the same to the previously used.
+In terms of APIs, according to [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Idempotent), idempotency is related to the mutation of the server state using identical calls, however it is common to find guides that point out that the server's response must also be the same to the previously used.
 
 Although not strictly in accordance with the reference, the practical background of this statement is in the objective of solving the problem of retries, in which one of the requirements is that the customer can verify whether his request has been processed or not.
 
